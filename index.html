@@ -111,7 +111,7 @@ nav a[aria-current="true"]:not(.cta){color:#fff}
 @keyframes swingsix{0%,24%{transform:rotate(-75deg);animation-timing-function:ease-in}33%{transform:rotate(45deg);animation-timing-function:ease-out}50%{transform:rotate(55deg)}72%,100%{transform:rotate(-75deg)}}
 @keyframes flysix{0%{transform:translate(14px,98px);opacity:0}4%{opacity:1}30%{transform:translate(80px,100px);opacity:1;animation-timing-function:ease-out}33%{transform:translate(84px,98px)}52%{transform:translate(300px,18px);opacity:1;animation-timing-function:ease-in}60%,100%{transform:translate(352px,4px) scale(.6);opacity:0}}
 @keyframes sixtext{0%,44%{opacity:0;transform:scale(.4)}52%{opacity:1;transform:scale(1.15)}58%,80%{opacity:1;transform:scale(1)}90%,100%{opacity:0}}
-@media(prefers-reduced-motion:reduce){.hero .crest,.hero::before,.ember,.in *,.six *,.totop span,.sixball,.sixflash,.scrollcue span,.ric{animation:none!important}.js .rv{opacity:1;transform:none;transition:none}.ember{display:none}}
+@media(prefers-reduced-motion:reduce){.hero .crest,.hero::before,.ember,.in *,.six *,.totop span,.sixball,.sixflash,.scrollcue span,.ric,.socbtn{animation:none!important}.js .rv{opacity:1;transform:none;transition:none}.ember{display:none}}
 
 .trail::before{width:100%;transform:scaleX(var(--p,0));transform-origin:left;will-change:transform}
 .trail .ball{left:0;will-change:transform;transform:translateX(calc(var(--p,0)*(100vw - 14px))) rotate(calc(var(--p,0)*3600deg))}
@@ -258,10 +258,12 @@ nav .navmenu a::after{display:none}
 .beat .btn{margin-top:26px}
 .cemail{margin-top:10px;font-size:1.15rem;font-weight:600}.cemail a{color:#ffb347;text-decoration:none}.cemail a:hover{text-decoration:underline}
 .socnote{margin-top:22px;font-size:.95rem;color:var(--muted)}
-.socbtn{width:56px;height:56px;background:#000;border:1px solid #2e323d;border-radius:14px;display:inline-grid;place-items:center;text-decoration:none;transition:transform .3s ease,border-color .3s ease}
-.socbtn:hover{transform:translateY(-2px);border-color:#565b66}
+.socbtn{width:56px;height:56px;background:#000;border:1px solid #2e323d;border-radius:14px;display:inline-grid;place-items:center;text-decoration:none;transition:border-color .3s ease;animation:icFloat 3.6s ease-in-out infinite}
+.socbtn:hover{border-color:#565b66}
 .socbtn svg{width:28px;height:28px;display:block}
 .socs{gap:16px}
+.socs .socbtn:nth-child(2){animation-delay:.45s}
+.socs .socbtn:nth-child(3){animation-delay:.9s}
 .socbtn.fb{color:#1877F2}
 .socbtn.x{color:#fff}
 </style></head><body>
