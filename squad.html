@@ -109,14 +109,14 @@ ul.tick{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:10px}ul.tick 
 .trail .ball{position:absolute;top:-6px;left:calc(var(--p,0)*(100% - 14px));width:14px;height:14px;border-radius:50%;box-shadow:0 0 8px rgba(239,83,80,.55);transform:rotate(calc(var(--p,0)*3600deg))}
 .trail .ball::after,.totop span::after{content:"";position:absolute;inset:2px 4.5px;border-left:1.5px solid rgba(255,255,255,.9);border-right:1.5px solid rgba(255,255,255,.9);border-radius:50%}
 nav a[aria-current="true"]:not(.cta){color:#fff}
-.totop{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));width:48px;height:48px;border:0;border-radius:50%;background:var(--dark);display:grid;place-items:center;cursor:pointer;opacity:0;transform:translateY(20px);pointer-events:none;transition:opacity .25s,transform .25s;z-index:40;box-shadow:0 6px 20px rgba(0,0,0,.35)}
-.totop.show{opacity:1;transform:none;pointer-events:auto}.totop span{position:relative;width:26px;height:26px;border-radius:50%}.totop.go span{animation:roll .7s linear}
+.totop{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));width:60px;height:60px;border:0;border-radius:50%;background:var(--dark);display:grid;place-items:center;cursor:pointer;opacity:0;transform:translateY(20px);pointer-events:none;transition:opacity .25s,transform .25s;z-index:40;box-shadow:0 6px 20px rgba(0,0,0,.35)}
+.totop.show{opacity:1;transform:none;pointer-events:auto}.totop span{position:relative;width:32px;height:32px;border-radius:50%}.totop.go span{animation:roll .7s linear}
 .ic{width:48px;height:48px;border-radius:12px;background:var(--tint);color:var(--or);display:grid;place-items:center;margin-bottom:14px}.ic svg{width:28px;height:28px;overflow:visible}.ic *{transform-box:fill-box}
 .in .bat{transform-origin:50% 100%;animation:swing 1.2s ease-in-out both}.in .spin{transform-origin:center;animation:spn 1.3s cubic-bezier(.3,.1,.2,1) both}.in .cheer{transform-origin:center;animation:cheer 1.2s ease-in-out both}
 @keyframes swing{0%{transform:rotate(-70deg)}45%{transform:rotate(55deg)}70%{transform:rotate(25deg)}100%{transform:none}}
 @keyframes spn{0%{transform:rotate(-360deg) translateY(-6px)}100%{transform:none}}
 @keyframes cheer{25%{transform:translateY(-4px) scale(1.06)}50%{transform:none}75%{transform:translateY(-3px) scale(1.04)}}
-.js .rv{opacity:0;transform:translateY(16px);transition:opacity .8s ease,transform .8s cubic-bezier(.22,.61,.21,1)}.js .rv.in{opacity:1;transform:none}
+.js .rv{opacity:0;transform:translateY(8px);transition:opacity .35s ease,transform .35s cubic-bezier(.22,.61,.21,1)}.js .rv.in{opacity:1;transform:none}
 .pl{transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}.js .squad .pl:hover{transform:translateY(-4px);border-color:rgba(244,126,20,.65);box-shadow:0 12px 28px rgba(0,0,0,.25),0 0 0 1px rgba(244,126,20,.25),0 0 26px rgba(244,126,20,.18)}.pl .ph img{transition:transform .6s cubic-bezier(.22,.61,.21,1),filter .6s ease}
 .pl:hover .ph img{transform:scale(1.05);filter:saturate(1.04) contrast(1.03)}.pl:hover .ph img{transform:scale(1.05)}
 .six{background:var(--dark);border-radius:18px;padding:14px 18px;max-width:420px;margin-top:24px}.six svg{display:block;width:100%;height:auto;overflow:visible}
@@ -234,8 +234,8 @@ nav a:not(.brand):hover::after,nav a[aria-current="true"]:not(.cta)::after{trans
 .navmotto{margin:18px 0 4px;font:900 1.2rem var(--d);letter-spacing:.08em;text-transform:uppercase;color:var(--or)}
 .navest{margin:0;color:#8f98a6;font-size:.95rem}
 .navsocs{display:flex;justify-content:center;gap:12px;margin-top:16px}
-.navsocs .socbtn{width:40px;height:40px;border-radius:10px;animation:none}
-.navsocs .socbtn svg{width:20px;height:20px}
+.navsocs .socbtn{width:56px;height:56px;border-radius:14px;animation:none}
+.navsocs .socbtn svg{width:28px;height:28px}
 body.menu-open{overflow:hidden}
 @media(prefers-reduced-motion:reduce){.navmenu,.navmenu .navlinks a,.navmenu .navlinks a::after{transition:none!important}.navmenu.open .navlinks a{opacity:1;transform:none}}
 .btn::after{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);transition:left .6s ease;pointer-events:none}
@@ -434,6 +434,7 @@ nav .wrap .shortjoin{display:none}
 }
 @media(min-width:1024px) and (max-width:1199px){.desktoplinks{gap:18px}}
 @media(min-width:1100px){.squad{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1024px){footer{padding:28px 0 36px}}
 </style>
 <style>
 /* Squad-only: animated batsman icon + drifting portraits (reduced-motion safe) */
